@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f4f5fa;
+  color: #333;
+  line-height: 1.45;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+.hef-portal {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #0d8de0;
+  padding: 0;
+  position: relative;
+  z-index: 1030;
+  height: 115px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.18);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px 0 47px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logos {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-logos img {
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+}
+
+.header-logos img:nth-child(2) {
+  width: 80px;
+}
+
+.header-logos .main-logo {
+  height: 60px;
+  width: 60px;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.header-title h3 {
+  color: #fff;
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  font-size: 21px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0 0 0 6px;
+  line-height: 1.2;
+}
+
+.header-title .header-sep {
+  color: #fff;
+  font-size: 17px;
+  margin: 0 2px;
+}
+
+.header-title .header-tagline {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.horizontal-menu {
+  background: #fdc119;
+  border-top: 10px solid #007e3c;
+  width: 100%;
+  min-height: 73px;
+  position: relative;
+  z-index: 1020;
+  text-align: center;
+  box-shadow: rgba(0,0,0,0.1) 0px 2px 30px 2px;
+}
+
+.horizontal-menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 73px;
+}
+
+.horizontal-menu li {
+  position: relative;
+  line-height: inherit;
+}
+
+.horizontal-menu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 26px 14px;
+  color: #000;
+  text-decoration: none;
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.1;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.horizontal-menu a:hover {
+  color: #0d8de0;
+}
+
+.horizontal-menu i {
+  font-size: 18px;
+}
+
+.horizontal-menu .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  min-width: 240px;
+  z-index: 1000;
+  border: 1px solid #e8e8e8;
+  text-align: left;
+}
+
+.horizontal-menu .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.horizontal-menu .dropdown-content a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  color: #333;
+  font-size: 13px;
+  font-weight: 400;
+  border-bottom: 1px solid #f0f0f0;
+  white-space: nowrap;
+}
+
+.horizontal-menu .dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.horizontal-menu .dropdown-content a:hover {
+  background: #f8f9fa;
+  color: #0d8de0;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('https://portal.hef.co.ke/assets/app-assets/images/patterns/bg06.png') repeat;
+  padding: 30.8px;
+  width: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+}
+
+.login-page-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 412px;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 4.9px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.login-card-header {
+  background: #fff;
+  padding: 21px;
+  text-align: center;
+}
+
+.login-card-header .brand-logos {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
+}
+
+.login-card-header h6 {
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  font-size: 12.6px;
+  font-weight: 400;
+  color: #6b6f82;
+  margin: 10px 0 0;
+  padding: 21px 0 0;
+}
+
+.login-card-body {
+  padding: 21px;
+}
+
+.msg_act {
+  margin-bottom: 14px;
+}
+
+.msg_act h5 {
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  font-size: 15.96px;
+  font-weight: 400;
+  margin: 0 0 7px;
+  text-align: center;
+  color: #464855;
+}
+
+.msg_act.alert-secondary {
+  background: #e1e2e6;
+  border: 1px solid #d6d7dc;
+  color: #383a44;
+  border-radius: 3.5px;
+  padding: 10.5px 14px;
+}
+
+.msg_act.alert-cyan {
+  background: #1ce5ff;
+  border: 1px solid #00bcd4;
+  color: #001e22;
+  border-radius: 3.5px;
+  padding: 10.5px 14px;
+}
+
+.message {
+  display: none;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.message.alert-danger {
+  background: #fef0f0;
+  border: 1px solid #fcc;
+  color: #c00;
+}
+
+.message.alert-danger .alert-icon {
+  margin-right: 10px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 21px;
+}
+
+.form-group.has-icon-left .form-control {
+  padding-left: 52px;
+  padding-right: 17.5px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 10.5px 17.5px;
+  font-size: 17.5px;
+  line-height: 1.45;
+  color: #3b4781;
+  background: #fff;
+  background-clip: padding-box;
+  border: 1px solid #cacfe7;
+  border-radius: 4.9px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control.input-lg {
+  padding: 10.5px 17.5px 10.5px 51.875px;
+  font-size: 17.5px;
+  border-radius: 4.9px;
+  height: 42px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #0d8de0;
+  box-shadow: 0 0 0 3px rgba(13, 141, 224, 0.15);
+}
+
+.form-control-position {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 42px;
+  height: 100%;
+  color: #6b6f82;
+  font-size: 16px;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-block {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  color: #777;
+  font-size: 18px;
+}
+
+.password-toggle:hover {
+  color: #0d8de0;
+}
+
+.form-control-position i {
+  font-family: 'Font Awesome 5 Free' !important;
+  font-weight: 900;
+  speak: none;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.form-control-position i.ft-user::before { content: '\f007'; }
+.form-control-position i.ft-lock::before { content: '\f023'; }
+
+.login-card .card-header {
+  background: #fff;
+  padding: 21px;
+  text-align: center;
+  border: 0;
+}
+
+.login-card .card-title {
+  margin: 0;
+  text-align: center;
+}
+
+.login-card .card-title .brand-logos {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0;
+}
+
+.login-card .card-header h6 {
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  font-size: 12.6px;
+  font-weight: 400;
+  color: #6b6f82;
+  margin: 10px 0 0;
+  padding: 21px 0 0;
+}
+
+.login-card .card-body {
+  padding: 21px;
+  display: block;
+}
+
+.login-card .card,
+.card.border-grey.border-lighten-3 {
+  border-radius: 0;
+  background: transparent;
+  margin: 0;
+  border: 1px solid #e0e0e0;
+}
+
+.btn-signin {
+  background: #28d094;
+  color: #fff;
+  border: 1px solid #1ec481;
+  padding: 14px 17.5px;
+  border-radius: 4.9px;
+  font-size: 17.5px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-signin:hover:not(:disabled) {
+  background: #1ec481;
+  box-shadow: rgba(62,57,107,0.2) 0px 10px 18px 0px;
+}
+
+.btn-signin:disabled {
+  background: #a0c4e8;
+  cursor: not-allowed;
+}
+
+.caps-warning {
+  display: none;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 -15px 21px;
+}
+
+.form-group.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 21px;
+  align-items: center;
+}
+
+.form-group.row > .col-md-6,
+.form-group.row > [class*="col-"] {
+  position: relative;
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.form-group.row .col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.chk-remember {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #555;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.checkbox-label input {
+  width: 16px;
+  height: 16px;
+  accent-color: #28a745;
+  margin: 0;
+  padding: 0;
+}
+
+.forgot-link {
+  color: #1e9ff2;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  background: #28d094;
+  color: #fff;
+  border: 1px solid #1ec481;
+  padding: 14px 17.5px;
+  border-radius: 4.9px;
+  font-size: 17.5px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.login-btn:hover:not(:disabled) {
+  background: #1ec481;
+  transform: translateY(-1px);
+  box-shadow: rgba(62,57,107,0.2) 0px 10px 18px 0px;
+}
+
+.login-btn:disabled {
+  background: #a0c4e8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.login-btn i {
+  font-size: 18px;
+}
+
+.card-footer {
+  padding: 0 21px 21px;
+  text-align: center;
+}
+
+.card-footer .card-subtitle {
+  font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+  font-size: 12.6px;
+  color: #6b6f82;
+  margin: 14px 21px;
+}
+
+.register-btn {
+  background: #1e9ff2;
+  color: #fff;
+  border: 1px solid #168dee;
+  padding: 14px 17.5px;
+  border-radius: 4.9px;
+  font-size: 17.5px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 42px;
+}
+
+.register-btn:hover {
+  background: #168dee;
+  transform: translateY(-1px);
+  box-shadow: rgba(62,57,107,0.2) 0px 10px 18px 0px;
+}
+
+.register-btn i {
+  font-size: 18px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  margin-top: auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+
+.footer-links a {
+  color: #0056a0;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .header-wrapper {
+    padding: 0;
+  }
+
+  .header-title h3 {
+    font-size: 16px;
+  }
+
+  .header-title .header-tagline {
+    display: none;
+  }
+
+  .header-title .header-sep {
+    display: none;
+  }
+
+  .header-logos img {
+    height: 45px;
+  }
+
+  .horizontal-menu {
+    min-height: auto;
+    overflow-x: auto;
+  }
+
+  .horizontal-menu ul {
+    justify-content: flex-start;
+    line-height: normal;
+  }
+
+  .horizontal-menu a {
+    padding: 14px 12px;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  .main-content {
+    padding: 20px 15px 40px;
+  }
+
+  .login-card {
+    border-radius: 0;
+  }
+
+  .login-card-body {
+    padding: 1.5rem;
+  }
+}
