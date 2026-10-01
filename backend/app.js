@@ -27,6 +27,11 @@ const getCallbackUrl = (req) =>
 app.use(cors());
 app.use(express.json());
 
+// Serve static files from frontend build
+const path = require('path');
+const frontendPath = path.join(__dirname, '../frontend/dist');
+app.use(express.static(frontendPath));
+
 const authMiddleware = (req, res, next) => {
   const authHeader = req.headers.authorization;
   if (!authHeader || !authHeader.startsWith('Bearer ')) {
@@ -504,6 +509,13 @@ app.post('/api/payment/ipn', async (req, res) => {
   } catch (error) {
     console.error('IPN error:', error);
     res.status(500).json({ message: 'IPN processing failed' });
+  }
+});
+
+// SPA fallback - serve index.html for all non-API routes
+app.get('/{*splat}', (req, res) => {
+  if (!req.path.startsWith('/api/')) {
+    res.sendFile(path.join(frontendPath, 'index.html'));
   }
 });
 
